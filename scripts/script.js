@@ -1,24 +1,48 @@
-$(document).load(function (params) {
-    // this function is only for illustration purposes.
-    // apiKey can be predefined in a variable/constant or can be used from localstorage as below
-    
-});
+const base = 'https://zipcodedownload.com:5430/';
 
-$('#zipCode').on('keyup',function () {
-
-});
-
-function assembleURL(params) {
+function assembleURL(params, apiName) {
     // this will receive the parameter(s) as object and assemble URL based on it
     // makes call to makeAPICall() and sends parameters
-    console.log(params);
+    let url = base + apiName + '/?';
+    for (var key in params) {
+        url += key + '=' + params[key] + '&';
+    }
+    url += 'key=' + '';
+    makeAPICall(url);
 }
-
-function makeAPICall(params) {
+function makeAPICall(url) {
     // this will receive the URL to make call to an API Endpoint
     // makes call to afterGettingData() and sends parameters
-}
-
-function afterGettingData(params) {
-    // this will populate relevant form fields
+    $.ajax({
+        cache: false,
+        dataType: 'text',
+        crossDomain: true,
+        type: 'GET',
+        url: url,
+        //headers: headers,
+        success: function (data, status) {
+            if (status === 'success') {
+                // fun.return.data = data;
+                // fun.return.isSuccess = true;
+                // if (scope.isJson) {
+                //     // $(lmntId).text(data);
+                //     $(lmntId).text(JSON.stringify(JSON.parse(data), null, "\t") + "\n\nstatus code: 200");
+                // } else {
+                //     $(lmntId).text(data + "\n\nstatus code: 200");
+                // }
+                afterGettingData(JSON.parse(data));
+            } else {
+                // fun.return.data = {};
+                // fun.return.isSuccess = false;
+            }
+        },
+        error: function (err) {
+            // if (scope.isJson) {
+            //     //$(lmntId).text(err.responseText, null, "\t");
+            //     $(lmntId).text(JSON.stringify(JSON.parse(err.responseText), null, "\t") + "\n\nstatus code: " + err.status);
+            // } else {
+            //     $(lmntId).text(err.responseText + "\n\nstatus code: " + err.status);
+            // }
+        }
+    });
 }

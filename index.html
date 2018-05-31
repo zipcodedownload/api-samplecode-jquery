@@ -49,36 +49,31 @@
         <form class="pt-2 form-part">
             <div class="form-group">
                 <label for="zipCode">Zip/Postal Code</label>
-                <input class="form-control" id="zipCode" placeholder="Enter zip/postal code">
-                <small id="zipCodeValidation" class="form-text text-muted">Some validation text.</small>
+                <input class="form-control" id="zipCode" placeholder="Enter zip/postal code" autocomplete='postal-code'>
+                <small id="zipCodeValidation" class="form-text text-muted"></small>
             </div>
             <div class="form-group">
                 <!--
                     Should/could be a drop-down list
                 -->
                 <label for="cityName">City</label>
-                <input type="text" class="form-control" id="cityName" placeholder="City Name">
-                <small id="cityNameValidation" class="form-text text-muted">Some validation text.</small>
+                <input type="text" class="form-control" id="cityName" placeholder="City Name" autocomplete='address-level2'>
+                <small id="cityNameValidation" class="form-text text-muted" style="display: none;">Some validation text.</small>
             </div>
             <div class="form-group">
                 <label for="provinceName">State/Province</label>
-                <input type="text" class="form-control" id="provinceName" placeholder="State/Province">
-                <small id="provinceNameValidation" class="form-text text-muted">Some validation text.</small>
-            </div>
-            <div class="form-group">
-                <label for="provinceName">State/Province</label>
-                <input type="text" class="form-control" id="provinceName" placeholder="State/Province">
-                <small id="provinceNameValidation" class="form-text text-muted">Some validation text.</small>
+                <input type="text" class="form-control" id="provinceName" placeholder="State/Province" autocomplete='address-level1'>
+                <small id="provinceNameValidation" class="form-text text-muted" style="display: none;">Some validation text.</small>
             </div>
         </form>
     </main>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/index-script.js"></script>
 </body>
 
 </html>
