@@ -22,21 +22,14 @@ function makeAPICall(url) {
         //headers: headers,
         success: function (data, status) {
             if (status === 'success') {
-                // fun.return.data = data;
-                // fun.return.isSuccess = true;
-                // if (scope.isJson) {
-                //     // $(lmntId).text(data);
-                //     $(lmntId).text(JSON.stringify(JSON.parse(data), null, "\t") + "\n\nstatus code: 200");
-                // } else {
-                //     $(lmntId).text(data + "\n\nstatus code: 200");
-                // }
                 afterGettingData(JSON.parse(data));
             } else {
-                // fun.return.data = {};
-                // fun.return.isSuccess = false;
+                console.log("Errored out", status);
+                debugger;
             }
         },
         error: function (err) {
+            handleValidations();
             // if (scope.isJson) {
             //     //$(lmntId).text(err.responseText, null, "\t");
             //     $(lmntId).text(JSON.stringify(JSON.parse(err.responseText), null, "\t") + "\n\nstatus code: " + err.status);
