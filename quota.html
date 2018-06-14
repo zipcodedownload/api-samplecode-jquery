@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zip Code API Sample | City Name Drop Down</title>
+    <title>Zip Code API Sample | Quota</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +23,6 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <header>
-        <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="https://zipcodedownload.com">Zip Code Download</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -36,44 +35,41 @@
                         <a class="nav-link" href="./index.html">Zip Auto-fill</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./city-drop-down.html">City Drop Down</a>
+                        <a class="nav-link" href="./city-drop-down.html">City Drop Down</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./radius.html">Radius</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./quota.html">Quota</a>
+                        <a class="nav-link active" href="./quota.html">Quota</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main role="main" class="container mt-5">
-        <h3 class="pt-5">Zip code city drop-down example coming up...</h3>
+    <main role="main" class="container pt-5">
+        <h3 class="pt-5">Zip Code Query quota example.</h3>
         <form class="pt-2 form-part">
-            <div class="form-group ">
-                <label for="countryName">Select Country</label>
-                <select id="countryName" class="form-control" autocomplete='address-level2'>
-                        <option value="usa">U.S.A.</option>
-                        <option value="canada">Canada</option>
-                    </select>
-            </div>
             <div class="form-group">
-                <label for="zipCode">City Name</label>
-                <input class="form-control" id="cityName" placeholder="Enter city" autocomplete='city'>
-                <small id="cityNameValidation" class="form-text text-muted"></small>
-            </div>
-            <div class="form-group ">
-                <label for="selectZipCode">Select Zip Code</label>
-                <select id="selectZipCode" class="form-control" autocomplete='address-level2'>
-                        <option value="0">Select</option>
-                    </select>
+                <label for="zipCode">Api Key</label>
+                <input class="form-control" id="apikey" placeholder="Enter api key" autocomplete='key' value="demoapikey">
+                <small id="validation" style="display: none;" class="form-text text-muted">No Data</small>
             </div>
         </form>
+        <div class="form-part">
+            <button class="btn full-width" onclick="getData()"> Check Usage </button>
+        </div>
+        <div class="card-container row" id="card-container">
+            
+        </div>
     </main>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="./scripts/script.js"></script>
-    <script src="./scripts/city-drop-down-script.js"></script>
+    <script src="./scripts/quota-script.js"></script>
 </body>
 
 </html>
