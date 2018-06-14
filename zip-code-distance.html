@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Zip Code API Sample | Zip Code Auto-fill</title>
+    <title>Zip Code API Sample | Radius</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="./index.html">Zip Auto-fill</a>
+                        <a class="nav-link" href="./index.html">Zip Auto-fill</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./city-drop-down.html">City Drop Down</a>
@@ -41,7 +41,7 @@
                         <a class="nav-link" href="./radius.html">Radius</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./zip-code-distance.html">Distances</a>
+                        <a class="nav-link active" href="./zip-code-distance.html">Distances</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./quota.html">Quota</a>
@@ -51,32 +51,25 @@
         </nav>
     </header>
     <main role="main" class="container pt-5">
-        <h3 class="pt-5">Zip code autofill example.</h3>
+        <h3 class="pt-5">Zip List Distance example.</h3>
         <form class="pt-2 form-part">
             <div class="form-group">
-                <label for="zipCode">Zip/Postal Code</label>
-                <input class="form-control" id="zipCode" placeholder="Enter zip/postal code" autocomplete='postal-code'>
-                <small id="zipCodeValidation" class="form-text text-muted"></small>
+                <label for="zipCode">Zip Codes</label>
+                <input class="form-control" id="zipCode" placeholder="Enter zip code" autocomplete='postal-code' value="10212,10213,10249,10211,10199,10185,50001">
+                <small id="validation" style="display: none;" class="form-text text-muted">No Data</small>
             </div>
             <div class="form-group ">
-                <label for="cityName">City</label>
-                <input type="text" class="form-control" id="cityName" placeholder="City Name" autocomplete='address-level2'>
+                <label for="cityName">With Distance less than</label>
+                <input type="text" class="form-control" id="distance-lt" placeholder="in miles" autocomplete='address-level2' value="3.1">
                 <!--<small id="cityNameValidation" class="form-text text-muted" style="display: none;">Some validation text.</small>-->
-            </div>
-            <div class="form-group ">
-                <label for="selectCityName">Select City</label>
-                <select id="selectCityName" class="form-control" autocomplete='address-level2'>
-                    <option value="0">Select</option>
-                    
-                </select>
-                <!--<small id="cityNameValidation" class="form-text text-muted" style="display: none;">Some validation text.</small>-->
-            </div>
-            <div class="form-group">
-                <label for="provinceName">State/Province</label>
-                <input type="text" class="form-control" id="provinceName" placeholder="State/Province" autocomplete='address-level1'>
-                <small id="provinceNameValidation" class="form-text text-muted" style="display: none;">Some validation text.</small>
             </div>
         </form>
+        <div class="form-part">
+            <button class="btn full-width" onclick="getData()"> Get Distances </button>
+        </div>
+        <div class="card-container row" id="card-container">
+            
+        </div>
     </main>
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>-->
@@ -84,7 +77,7 @@
         crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="./scripts/script.js"></script>
-    <script src="./scripts/index-script.js"></script>
+    <script src="./scripts/zip-code-distance.js"></script>
 </body>
 
 </html>
