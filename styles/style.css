@@ -4,3 +4,18 @@
     padding: 15px;
     margin: 0 auto;
 }
+
+.full-width {
+    width: 100%;
+}
+
+.card-container {
+    width: 100%;
+    max-width: 72rem;
+    padding: 35px;
+    margin: 0 auto;
+}
+
+.card-width {
+    width: 14rem;
+}

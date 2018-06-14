@@ -29,13 +29,7 @@ function makeAPICall(url) {
             }
         },
         error: function (err) {
-            handleValidations();
-            // if (scope.isJson) {
-            //     //$(lmntId).text(err.responseText, null, "\t");
-            //     $(lmntId).text(JSON.stringify(JSON.parse(err.responseText), null, "\t") + "\n\nstatus code: " + err.status);
-            // } else {
-            //     $(lmntId).text(err.responseText + "\n\nstatus code: " + err.status);
-            // }
+            handleValidations(err);
         }
     });
 }

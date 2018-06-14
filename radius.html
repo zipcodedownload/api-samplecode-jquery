@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zip Code API Sample | Radius</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="https://zipcodedownload.com">Zip Code Download</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Zip Auto-fill</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./city-drop-down.html">City Drop Down</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./radius.html">Radius</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container pt-5">
+        <h3 class="pt-5">Zip code autofill example.</h3>
+        <form class="pt-2 form-part">
+            <div class="form-group">
+                <label for="zipCode">Zip Code</label>
+                <input class="form-control" id="zipCode" placeholder="Enter zip code" autocomplete='postal-code' value="10212">
+                <small id="validation" style="display: none;" class="form-text text-muted">No Data</small>
+            </div>
+            <div class="form-group ">
+                <label for="cityName">Radius of</label>
+                <input type="text" class="form-control" id="radius" placeholder="in miles" autocomplete='address-level2' value="0.7">
+                <!--<small id="cityNameValidation" class="form-text text-muted" style="display: none;">Some validation text.</small>-->
+            </div>
+        </form>
+        <div class="form-part">
+            <button class="btn full-width" onclick="getData()"> Get Zip Codes </button>
+        </div>
+        <div class="card-container row" id="card-container">
+            
+        </div>
+    </main>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/radius-script.js"></script>
+</body>
+
+</html>
